@@ -135,7 +135,7 @@ Utility.Raycast = function(self, phem19, phem20, phem21, phem22, phem23, phem24)
 	if type(phem21) ~= "number" or phem21 < 100 or not getgenv().SilentConfig.State then
 		return oldFN(self, phem19, phem20, phem21, phem22, phem23, phem24)
 	end
-warn('hooked')
+
 	local object = getClosesObject()
 
 	if not object then
