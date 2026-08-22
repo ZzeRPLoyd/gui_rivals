@@ -2669,3 +2669,7 @@ SetActiveTab(
 print(
 	"✓ Animated FPS UI loaded"
 )
+
+return function()
+return ScreenGui
+end
