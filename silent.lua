@@ -9,9 +9,13 @@ local Players = game:GetService("Players")
 local CCS = game:GetService("CollectionService")
 local RS = game:GetService("ReplicatedStorage")
 local RunService = game:GetService("RunService")
-local LocalPlayer = Players.LocalPlayer
+
+local LocalPlayer = Players:WaitForChild("LocalPlayer", 5)
+if not LocalPlayer then return end
+
 local mouse = LocalPlayer:GetMouse()
-local Utility = require(RS.Modules.Utility)
+
+local Utility = require(RS:WaitForChild("Modules", 5):WaitForChild("Utility", 5))
 local oldFN = Utility.Raycast
 
 local cachedObject = nil
