@@ -16,7 +16,7 @@ local Player = Players.LocalPlayer
 --==================================================
 -- COLORS
 --==================================================
-
+local md = {}
 local Colors = {
 
 	Main = Color3.fromRGB(14, 14, 15),
@@ -2669,8 +2669,6 @@ SetActiveTab(
 print(
 	"✓ Animated FPS UI loaded"
 )
-
-local md = {}
 
 md.get = function()
 	return ScreenGui
