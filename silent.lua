@@ -131,32 +131,32 @@ local function getClosesObject()
 	return closestObject
 end
 
-Utility.Raycast = function(self, phem19, phem20, phem21, phem22, phem23, phem24)
-	if type(phem21) ~= "number" or phem21 < 100 or not getgenv().SilentConfig.State then
-		return oldFN(self, phem19, phem20, phem21, phem22, phem23, phem24)
-	end
+-- Utility.Raycast = function(self, phem19, phem20, phem21, phem22, phem23, phem24)
+-- 	if type(phem21) ~= "number" or phem21 < 100 or not getgenv().SilentConfig.State then
+-- 		return oldFN(self, phem19, phem20, phem21, phem22, phem23, phem24)
+-- 	end
 
-	local object = getClosesObject()
+-- 	local object = getClosesObject()
 
-	if not object then
-		return oldFN(self, phem19, phem20, phem21, phem22, phem23, phem24)
-	end
+-- 	if not object then
+-- 		return oldFN(self, phem19, phem20, phem21, phem22, phem23, phem24)
+-- 	end
 
-	local objectPosition = object.Position
-	local direction = (objectPosition - phem19).Unit
-	local distance = (objectPosition - phem19).Magnitude
-	if distance > phem21 then
-		distance = phem21
-		objectPosition = phem19 + (direction * phem21)
-	end
-	return {
-		Position = objectPosition,
-		Distance = distance,
-		Instance = object,
-		Material = object.Material,
-		Normal = -direction
-	}
-end
+-- 	local objectPosition = object.Position
+-- 	local direction = (objectPosition - phem19).Unit
+-- 	local distance = (objectPosition - phem19).Magnitude
+-- 	if distance > phem21 then
+-- 		distance = phem21
+-- 		objectPosition = phem19 + (direction * phem21)
+-- 	end
+-- 	return {
+-- 		Position = objectPosition,
+-- 		Distance = distance,
+-- 		Instance = object,
+-- 		Material = object.Material,
+-- 		Normal = -direction
+-- 	}
+-- end
 
 SILENT.configValueChanged = function(name, value)
 warn('silent config set', name, value)
