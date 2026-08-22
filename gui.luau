@@ -145,13 +145,13 @@ end
 local ScreenGui = Instance.new("ScreenGui")
 
 ScreenGui.IgnoreGuiInset = true
-ScreenGui.DisplayOrder = 99
+ScreenGui.DisplayOrder = 999
 ScreenGui.Name = "FPSMenu"
 ScreenGui.ResetOnSpawn = false
 --ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 ScreenGui.Parent =
-	game:GetService('CoreGui')
+	game.CoreGui
 
 --==================================================
 -- BACKGROUND EFFECT
@@ -2670,6 +2670,10 @@ print(
 	"✓ Animated FPS UI loaded"
 )
 
-return function()
-return ScreenGui
+local md = {}
+
+md.get = function()
+	return ScreenGui
 end
+
+return md
