@@ -145,10 +145,10 @@ end
 local ScreenGui = Instance.new("ScreenGui")
 
 ScreenGui.IgnoreGuiInset = true
-ScreenGui.DisplayOrder = 999
+ScreenGui.DisplayOrder = 99
 ScreenGui.Name = "FPSMenu"
 ScreenGui.ResetOnSpawn = false
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+--ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 ScreenGui.Parent =
 	game:GetService('CoreGui')
