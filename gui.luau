@@ -151,7 +151,7 @@ ScreenGui.ResetOnSpawn = false
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 ScreenGui.Parent =
-	Player:WaitForChild("PlayerGui")
+	game:GetService('CoreGui')
 
 --==================================================
 -- BACKGROUND EFFECT
