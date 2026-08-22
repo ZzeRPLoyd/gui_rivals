@@ -16,7 +16,7 @@ local Player = Players.LocalPlayer
 --==================================================
 -- COLORS
 --==================================================
-local md = {}
+
 local Colors = {
 
 	Main = Color3.fromRGB(14, 14, 15),
@@ -145,7 +145,7 @@ end
 local ScreenGui = Instance.new("ScreenGui")
 
 ScreenGui.IgnoreGuiInset = true
-ScreenGui.DisplayOrder = 999
+ScreenGui.DisplayOrder = 99
 ScreenGui.Name = "FPSMenu"
 ScreenGui.ResetOnSpawn = false
 --ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -2669,9 +2669,3 @@ SetActiveTab(
 print(
 	"✓ Animated FPS UI loaded"
 )
-
-md.get = function()
-	return ScreenGui
-end
-
-return md
